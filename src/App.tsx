@@ -2,7 +2,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import Layout from "./layouts/layout";
 import HomePage from "./pages/HomePage";
 import AuthCallbackPage from "./pages/AuthCallbackPage";
-import UserProfileForm from "./forms/user-profile-form/UserProfileForm";
+import UserProfilePage from "./pages/UserProfilePage";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
         path="/user-profile"
         element={
           <Layout>
-            <UserProfileForm />
+            <UserProfilePage />
           </Layout>
         }
       />
