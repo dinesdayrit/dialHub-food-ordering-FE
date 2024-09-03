@@ -51,7 +51,7 @@ type Props = {
   isLoading: boolean;
 };
 
-const ManageRestaurantForm = ({ onSave, isLoading }: Props) => {
+export default function ManageRestaurantForm({ onSave, isLoading }: Props) {
   const form = useForm<RestaurantFormData>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -66,7 +66,7 @@ const ManageRestaurantForm = ({ onSave, isLoading }: Props) => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-8 bg-gray-50 p-10 rounded-lg"
+        className="space-y-8 bg-gray-50 p-10 rounded-lg shadow-xl"
       >
         <DetailsSection />
         <Separator />
@@ -75,6 +75,4 @@ const ManageRestaurantForm = ({ onSave, isLoading }: Props) => {
       </form>
     </Form>
   );
-};
-
-export default ManageRestaurantForm;
+}
