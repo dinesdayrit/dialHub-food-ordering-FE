@@ -22,7 +22,7 @@ export default function ImageSection() {
           Add an image that will be displayed on your restaurant listing in the
           search results. Adding a new image will overwrite the existing one.
         </FormDescription>
-        <div className="flex flex-col gap-8 w-[50%]">
+        <div className="flex flex-col gap-8 md:w-[50%]">
           {existingImageUrl && (
             <AspectRatio ratio={16 / 9}>
               <img
