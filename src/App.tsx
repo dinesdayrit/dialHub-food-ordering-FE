@@ -5,6 +5,7 @@ import AuthCallbackPage from "./pages/AuthCallbackPage";
 import UserProfilePage from "./pages/UserProfilePage";
 import ProtectedRoute from "./auth/ProtectedRoute";
 import ManageRestaurantPage from "./pages/ManageRestaurantPage";
+import SearPage from "./pages/SearPage";
 
 function App() {
   return (
@@ -18,6 +19,14 @@ function App() {
         }
       />
       <Route path="/auth-callback" element={<AuthCallbackPage />} />
+      <Route
+        path="/search/:city"
+        element={
+          <Layout>
+            <SearPage />
+          </Layout>
+        }
+      />
 
       {/* Protected Route */}
       <Route element={<ProtectedRoute />}>
