@@ -5,7 +5,7 @@ import AuthCallbackPage from "./pages/AuthCallbackPage";
 import UserProfilePage from "./pages/UserProfilePage";
 import ProtectedRoute from "./auth/ProtectedRoute";
 import ManageRestaurantPage from "./pages/ManageRestaurantPage";
-import SearPage from "./pages/SearPage";
+import SearchPage from "./pages/SearchPage";
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
         path="/search/:city"
         element={
           <Layout>
-            <SearPage />
+            <SearchPage />
           </Layout>
         }
       />
