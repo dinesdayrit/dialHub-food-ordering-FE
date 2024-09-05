@@ -37,6 +37,7 @@ export default function SearchPage() {
     setSearchState((prevState) => ({
       ...prevState,
       searchQuery: "",
+      page: 1,
     }));
   };
   if (isLoading) {
