@@ -11,7 +11,7 @@ export default function ManageRestaurantPage() {
   const { restaurant } = useGetMyRestaurant();
   const { updateRestaurant, isLoading: isUpdateLoading } =
     useUpdateMyRestaurant();
-
+  
   const isEditting = !!restaurant;
 
   return (
