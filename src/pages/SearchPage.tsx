@@ -20,6 +20,9 @@ export default function SearchPage() {
     page: 1,
     selectedCuisines: [],
   });
+
+  const [isExpanded, setIsExpanded] = useState<boolean>(false);
+
   const { results, isLoading } = useSearchRestaurants(searchState, city);
 
   const setSelectedCuisines = (selectedCuisines: string[]) => {
@@ -64,6 +67,10 @@ export default function SearchPage() {
         <CuisineFilter
           selectedCuisines={searchState.selectedCuisines}
           onChange={setSelectedCuisines}
+          isExpanded={isExpanded}
+          onExpandedClick={() =>
+            setIsExpanded((prevIsExpanded) => !prevIsExpanded)
+          }
         />
       </div>
       <div id="main-content" className="flex flex-col gap-5">
