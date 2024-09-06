@@ -6,6 +6,7 @@ import UserProfilePage from "./pages/UserProfilePage";
 import ProtectedRoute from "./auth/ProtectedRoute";
 import ManageRestaurantPage from "./pages/ManageRestaurantPage";
 import SearchPage from "./pages/SearchPage";
+import DetailPage from "./pages/DetailPage";
 
 function App() {
   return (
@@ -24,6 +25,15 @@ function App() {
         element={
           <Layout>
             <SearchPage />
+          </Layout>
+        }
+      />
+
+      <Route
+        path="/detail/:restaurantId"
+        element={
+          <Layout>
+            <DetailPage />
           </Layout>
         }
       />
