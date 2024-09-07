@@ -57,7 +57,7 @@ export default function OrderSummary({
         <Separator />
         <div className="flex justify-between">
           <span>Delivery</span>
-          <span>£{(restaurant.deliveryPrice / 100).toFixed(2)}</span>
+          <span>Php {(restaurant.deliveryPrice / 100).toFixed(2)}</span>
         </div>
         <Separator />
       </CardContent>
