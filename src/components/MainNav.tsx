@@ -16,11 +16,10 @@ export default function MainNav() {
         </>
       ) : (
         <Button
-          variant="ghost"
-          className="font-bold hover:text-orange-500 hover:bg-white"
+          className="font-bold bg-transparent text-zinc-600 rounded-full border border-orange-500 px-10 shadow-xl hover:bg-orange-500 hover:text-white"
           onClick={async () => await loginWithRedirect()}
         >
-          Log in
+          Sign in
         </Button>
       )}
     </span>
