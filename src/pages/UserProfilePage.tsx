@@ -1,4 +1,5 @@
 import { useGetMyUser, useUpdateMyuser } from "@/api/MyUserApi";
+import Spinner from "@/components/Spinner";
 import UserProfileForm from "@/forms/user-profile-form/UserProfileForm";
 
 export default function UserProfilePage() {
@@ -6,7 +7,7 @@ export default function UserProfilePage() {
   const { updateUser, isLoading: isUpdateLoading } = useUpdateMyuser();
 
   if (isGetLoading) {
-    return <span>Loading...</span>;
+    return <Spinner text="Getting Profile.." />;
   }
 
   if (!currentUser) {
