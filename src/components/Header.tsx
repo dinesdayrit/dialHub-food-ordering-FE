@@ -8,9 +8,9 @@ export default function Header() {
       <div className="container mx-auto flex justify-between items-center">
         <Link
           to="/"
-          className="text-3xl font-bold tracking-tight text-orange-500"
+          className="text-3xl font-bold tracking-tight text-green-500"
         >
-          DialHub
+          DiAL<span className="text-orange-500">Food</span>.Hub
         </Link>
         <div className="md:hidden">
           <MobileNav />
